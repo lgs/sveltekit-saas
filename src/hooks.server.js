@@ -39,6 +39,10 @@ async function enterpriseOnly({ event, resolve }) {
 	return resolve(event)
 }
 
+console.log('Hook server env.GITHUB_SECRET :', env.GITHUB_SECRET);
+console.log('Hook server env.AUTH_SECRET :', env.AUTH_SECRET);
+
+
 const authenticate = SvelteKitAuth({
 	adapter: PrismaAdapter(db),
 	providers: [
@@ -47,6 +51,7 @@ const authenticate = SvelteKitAuth({
 			clientSecret: env.GITHUB_SECRET
 		})
 	],
+	secret: env.AUTH_SECRET,
 	session: {
 		// temporary workaround
 		generateSessionToken() {
