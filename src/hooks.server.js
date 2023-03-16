@@ -1,6 +1,9 @@
 import { SvelteKitAuth } from '@auth/sveltekit'
 import GitHub from '@auth/core/providers/github'
-import { env } from '$env/dynamic/private'
+
+// import { env } from '$env/dynamic/private'
+import { GITHUB_ID, GITHUB_SECRET, AUTH_SECRET } from "$env/static/private"
+
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import { db } from '$lib/db'
 import { redirect, error } from '@sveltejs/kit'
@@ -39,19 +42,22 @@ async function enterpriseOnly({ event, resolve }) {
 	return resolve(event)
 }
 
-console.log('Hook server env.GITHUB_SECRET :', env.GITHUB_SECRET);
-console.log('Hook server env.AUTH_SECRET :', env.AUTH_SECRET);
+// debugging env vars
+// console.log('Hook server GITHUB_SECRET :', GITHUB_SECRET);
+// console.log('Hook server AUTH_SECRET :', AUTH_SECRET);
 
 
 const authenticate = SvelteKitAuth({
+	// uncomment the following line for Auth.js debugging
+	// debug: true,
 	adapter: PrismaAdapter(db),
 	providers: [
 		GitHub({
-			clientId: env.GITHUB_ID,
-			clientSecret: env.GITHUB_SECRET
+			clientId: GITHUB_ID,
+			clientSecret: GITHUB_SECRET
 		})
 	],
-	secret: env.AUTH_SECRET,
+	secret: AUTH_SECRET,
 	session: {
 		// temporary workaround
 		generateSessionToken() {
