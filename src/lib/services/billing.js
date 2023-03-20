@@ -12,7 +12,7 @@ export async function createCheckout({ email }, plan) {
 	return stripe.checkout.sessions.create({
 		success_url: absoluteURL('/welcome?checkout_session_id={CHECKOUT_SESSION_ID}'),
 		cancel_url: absoluteURL('/pricing'),
-		currency: 'usd',
+		currency: 'eur',
 		mode: 'subscription',
 		customer_email: email,
 		client_reference_id: user.id,
