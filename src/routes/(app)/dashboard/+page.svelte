@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { plan } from '$lib/stores'
 
 	export let data

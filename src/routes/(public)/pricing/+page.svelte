@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { signIn } from '@auth/sveltekit/client'
 
 	export let data

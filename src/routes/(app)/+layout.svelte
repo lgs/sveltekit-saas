@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '../../app.css'
 	import { signOut } from '@auth/sveltekit/client'
 	import { user } from '$lib/stores'
