@@ -13,13 +13,15 @@
 <h1>Pricing</h1>
 
 <section>
-	{#each data.plans as plan}
-		<article>
-			<h2>{plan.name}</h2>
+	<div class="grid">
+		{#each data.plans as plan}
+			<article>
+				<h2>{plan.name}</h2>
 
-			<p>{(plan.price / 100).toLocaleString('en', { style: 'currency', currency: 'usd' })}</p>
+				<p>{(plan.price / 100).toLocaleString('en', { style: 'currency', currency: 'usd' })}</p>
 
-			<button on:click|preventDefault={() => choose(plan)}>Choose</button>
-		</article>
-	{/each}
+				<button on:click|preventDefault={() => choose(plan)}>Choose</button>
+			</article>
+		{/each}
+	</div>
 </section>

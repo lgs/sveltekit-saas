@@ -11,7 +11,7 @@
 		<ul>
 			<li><a href="/">Home</a></li>
 			<li><a href="/pricing">Pricing</a></li>
-			<li><button on:click|preventDefault={() => signIn('github', { callbackUrl: '/dashboard' })} role="button">Sign in</button></li>			
+			<li><button on:click|preventDefault={() => signIn('github', { callbackUrl: '/dashboard' })} role="button" class="outline">Sign in</button></li>			
 		</ul>
 	</nav>	
 </header>

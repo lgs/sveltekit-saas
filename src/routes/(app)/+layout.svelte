@@ -12,7 +12,7 @@
 		<ul>
 			<li><a href="/">Home</a></li>
 			<li><a href="/billing">Billing</a></li>
-			<li><button on:click|preventDefault={() => signOut({ callbackUrl: '/' })}>Sign out</button></li>
+			<li><button class="outline" on:click|preventDefault={() => signOut({ callbackUrl: '/' })}>Sign out</button></li>
 		</ul>
 	</nav>	
 </header>
