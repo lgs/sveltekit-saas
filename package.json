@@ -40,5 +40,8 @@
 	"type": "module",
 	"prisma": {
 		"seed": "vite-node ./prisma/seed.js"
+	},
+	"dependencies": {
+		"@picocss/pico": "^1.5.7"
 	}
 }

@@ -6,6 +6,7 @@ specifiers:
   '@fontsource/fira-mono': ^4.5.10
   '@neoconfetti/svelte': ^1.0.0
   '@next-auth/prisma-adapter': ^1.0.5
+  '@picocss/pico': ^1.5.7
   '@prisma/client': ^4.11.0
   '@sveltejs/adapter-auto': ^2.0.0
   '@sveltejs/kit': ^1.13.0
@@ -25,6 +26,9 @@ specifiers:
   typescript: ^4.9.5
   vite: ^4.2.1
   vite-node: ^0.28.5
+
+dependencies:
+  '@picocss/pico': 1.5.7
 
 devDependencies:
   '@auth/core': 0.3.0
@@ -411,6 +415,10 @@ packages:
   /@panva/hkdf/1.0.4:
     resolution: {integrity: sha512-003xWiCuvePbLaPHT+CRuaV4GlyCAVm6XYSbBZDHoWZGn1mNkVKFaDbGJjjxmEFvizUwlCoM6O18FCBMMky2zQ==}
     dev: true
+
+  /@picocss/pico/1.5.7:
+    resolution: {integrity: sha512-RygdXNlSXieAs9jMw/AeqA1ki1kldgEYbRn8BnYZIPfRTM5NWZ4uVzMK6uMPhYlRjoT5wD/OplZvIefnCqyDCQ==}
+    dev: false
 
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}

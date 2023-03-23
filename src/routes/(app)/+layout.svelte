@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '@picocss/pico'
 	import '../../app.css'
 	import { signOut } from '@auth/sveltekit/client'
 	import { user } from '$lib/stores'
@@ -12,7 +13,7 @@
 		<ul>
 			<li><a href="/">Home</a></li>
 			<li><a href="/billing">Billing</a></li>
-			<li><button class="outline" on:click|preventDefault={() => signOut({ callbackUrl: '/' })}>Sign out</button></li>
+			<li><button class="" on:click|preventDefault={() => signOut({ callbackUrl: '/' })}>Sign out</button></li>
 		</ul>
 	</nav>	
 </header>

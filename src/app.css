@@ -1,3 +1,11 @@
+/*  
+    See 'Overriding CSS variables' @ Customization official doc: 
+    https://picocss.com/docs/customization.html
+
+    Find all the CSS variables used in the default theme here: 
+    https://github.com/picocss/pico/blob/master/css/themes/default.css
+*/
+
 /* Pink Light scheme (Default) */
 /* Can be forced with data-theme="light" */
 [data-theme="light"],
